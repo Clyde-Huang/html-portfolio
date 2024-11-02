@@ -28,9 +28,9 @@
 } */
 /* SOLUTION 2:  */
 .square:nth-of-type(2n) {
-    background-color: black, 50%;
+    background-color: orange;
 }
 
 .square:nth-of-type(2n-1) {
-    background-color: red 50%;
+    background-color: gray;
 }
