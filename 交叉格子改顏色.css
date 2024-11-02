@@ -14,10 +14,10 @@
     flex-wrap: wrap;
 }
 
-/* DO NOT TOUCH THIS FILE!!!  */
 
 
-/* SOLUTION #1:
+
+/* SOLUTION 1:
 
 .square:nth-child(odd) {
     background-color: red;
