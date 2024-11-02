@@ -1,4 +1,4 @@
-/* DO NOT TOUCH THIS FILE!!!  */
+
 .square {
     width: 100px;
     height: 100px;
@@ -6,8 +6,7 @@
     border: 1px solid black;
 }
 
-/* DO NOT TOUCH THIS FILE!!!  */
-/* THIS CODE WILL MAKE SENSE ONCE WE COVER FLEXBOX!  */
+
 #board {
     display: flex;
     margin: 0 auto;
@@ -29,9 +28,9 @@
 } */
 /* SOLUTION 2:  */
 .square:nth-of-type(2n) {
-    background-color: black;
+    background-color: black, 50%;
 }
 
 .square:nth-of-type(2n-1) {
-    background-color: red;
+    background-color: red 50%;
 }
