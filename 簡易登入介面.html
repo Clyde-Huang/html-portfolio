@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>簡易登入介面</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+
+    }
+
+
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+        background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20230523/pngtree-bible-gif-hd-wallpaper-image_2683159.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+
+    }
+
+    .box {
+        background-color: rgba(39, 38, 38, 0.8);
+        border: 1px solid none;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 0 550px;
+        width: 333px;
+        height: 333px;
+        margin-top: 50%;
+
+    }
+
+    .box>h2 {
+        color: azure;
+        text-align: center;
+        font-size: 2.5em;
+        margin-bottom: 35px;
+    }
+
+
+    .box .inbox {
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        margin-bottom: 12px;
+    }
+
+    .box .inbox>label {
+        color: aliceblue;
+        margin-bottom: 5px;
+
+    }
+
+    input {
+        background-color: rgba(248, 247, 247, );
+        border-radius: 5px;
+        height: 1.5em;
+    }
+
+    input:focus {
+        background-color: rgb(253, 253, 252);
+
+
+    }
+
+    button {
+        background-color: rgba(179, 92, 30, 0.9);
+        border: 2px solid none;
+        border-radius: 5px;
+        padding: 3px 25px;
+        color: azure;
+        margin-top: 8px;
+
+    }
+
+    button:hover {
+        color: rgb(226, 230, 11);
+        background-color: rgb(233, 85, 85, 0.9);
+    }
+
+    .btnbox>a {
+        outline: none;
+        display: block;
+        text-decoration: none;
+        text-align: end;
+        color: antiquewhite;
+        font-size: 0.9em;
+
+
+
+    }
+</style>
+
+
+<body>
+    <form action="$">
+        <div class="box">
+            <h2>Login</h2>
+            <div class="inbox">
+                <label for="">
+                    <h4>帳號</h4>
+                </label>
+                <input type="text" required>
+            </div>
+            <div class="inbox">
+                <label for="">
+                    <h4>密碼</h4>
+                </label>
+                <input type="password" required>
+            </div>
+            <div class="btnbox">
+                <a href="$">忘記密碼</a>
+                <div>
+                    <button>註冊</button>
+                    <button>登入</button>
+                </div>
+
+            </div>
+        </div>
+    </form>
+</body>
+
+
+</html>
