@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>頂部選單</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    nav {
+        width: 100%;
+        background-color: rgba(9, 41, 59);
+    }
+
+    ul {
+        width: 80%;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    ul li {
+        list-style: none;
+        display: inline-block;
+        padding: 20px;
+        align-items: center;
+
+    }
+
+    ul li:hover {
+        background: #268f63;
+    }
+
+    ul li a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .toggle {
+        width: 100%;
+        padding: 10px 20px;
+        background: #a3b3ae;
+        text-align: right;
+        box-sizing: border-box;
+        color: #fff;
+        font-size: 30px;
+        display: none;
+    }
+
+    @media (max-width:768px) {
+        .toggle {
+            display: block;
+        }
+
+        ul {
+            width: 100%;
+        }
+
+        ul li {
+            display: block;
+            text-align: center;
+        }
+    }
+</style>
+
+<body>
+    <div class="toggle"><ion-icon name="ellipsis-vertical-outline"></ion-icon></div>
+    <nav>
+        <ul>
+            <li><a href="@">Home</a></li>
+            <li><a href="@">About</a></li>
+            <li><a href="@">Services</a></li>
+            <li><a href="@">Portfolio</a></li>
+
+        </ul>
+
+
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    </nav>
+</body>
+
+
+</html>
