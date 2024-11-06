@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>收縮選單</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Times New Roman', Times, serif;
+        box-sizing: border-box;
+        text-decoration: none;
+
+    }
+
+    body {
+
+        background-position: center;
+        background-size: 980px 720px;
+        background-image: url(https://img.pikbest.com/wp/202342/fiery-flames-intense-close-up-of-flame-with-vibrant-red-orange-and-yellow-tones-against-a-black-backdrop_9947981.jpg!sw800);
+        background-repeat: no-repeat;
+        min-height: 100hv;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .container {
+
+        max-width: 1200px;
+        padding: 0 40px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .img,
+    .menu {
+        width: calc(100%-90px);
+        margin-top: 100px;
+    }
+
+    .menu {
+        width: 400px;
+    }
+
+    .img {
+        margin-right: 10px;
+        height: 250px;
+        border: 2px solid rgb(235, 130, 130, 0.5);
+        box-shadow: 15px 15px 180px red;
+    }
+
+    .title {
+        background-color: chocolate;
+
+        display: flex;
+        color: azure;
+        padding: 20px;
+        cursor: pointer;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 400px;
+        align-items: center;
+        justify-content: space-between;
+
+
+    }
+
+
+
+    .icon {
+        position: relative;
+        width: 14px;
+
+    }
+
+    .icon ::before,
+    .icon ::after {
+        content: "";
+        position: absolute;
+        width: 14px;
+        height: 3px;
+        background-color: azure;
+        top: -1.5px
+    }
+
+    .icon ::after {
+        transform: rotate(90deg);
+        transition: 0.5s linear;
+    }
+
+    .textt {
+        background-color: rgb(37, 185, 153, 0.7);
+        color: #333;
+        line-height: 26px;
+        margin: 6px 0;
+        opacity: 0;
+        height: 0;
+    }
+
+    .item:target .textt {
+        height: auto;
+        opacity: 1;
+        padding: 20px;
+        margin: 12px 0;
+    }
+
+    .item:target .icon::after {
+        transform: rotate(0);
+
+    }
+
+    @media screen and (max-width:360px) {
+        .container {
+            max-width: 600px;
+        }
+
+        .image,
+        .menu {
+            width: 100%;
+            margin: 20px 0;
+        }
+    }
+</style>
+
+<body>
+    <div class="container">
+        <a href="收縮選單.html"><img
+                src="https://img.pikbest.com/ai/illus_our/20230413/00b67723cd95248631b85c2435ca3043.jpg!w700wp"
+                alt="image" class="img"></a>
+        <div class="menu">
+            <!-- 1 -->
+            <div class="item" id="item1">
+                <a href="#item1" class="title">
+                    <span>
+                        烤<strong>肉</strong>雞腿怎麼醃？
+                    </span>
+                    <i class="icon"></i>
+                </a>
+
+                <p>
+
+                <ol class="textt">
+                    <h3>流程：</h3>
+                    <li>在一個碗中混合黃芥末醬、蜂蜜、美乃滋、醋、鹽、黑胡椒和切碎的大蒜，製成醃料。</li>
+                    <li>將雞腿肉放入醃料中，確保均勻覆蓋。</li>
+                    <li>放入密封袋中，冷藏至少30 分鐘。</li>
+                    <li>燒烤或烤雞腿肉至熟透，每邊約5 - 7 分鐘。</li>
+                </ol>
+                </p>
+            </div>
+
+            <!-- 2 -->
+            <div class="item" id="item2">
+                <a href="#item2" class="title">
+                    <span>
+                        烤<strong>箱</strong>雞腿怎麼醃？
+                    </span>
+                    <i class="icon"></i>
+                </a>
+
+                <p>
+
+                <ol class="textt">
+                    <h3>流程：</h3>
+                    <li>將蔥、薑、蒜頭丟入雞腿中，倒入醃料後均勻抓醃。</li>
+                    <li>放置醃漬至少半小時以上，如能醃漬一夜效果更佳。 </li>
+                    <li>將剩餘的醃料汁加入些許油，成為醃料油，並均勻塗抹在醃漬好的雞腿肉上。 </li>
+                    <li>烤箱先以160度預熱10分鐘，進烤箱先以160度烤20分鐘後，再改以180度烤20至30分鐘即完成。</li>
+                </ol>
+
+
+
+
+                </p>
+            </div>
+            <!-- 3 -->
+            <div class="item" id="item3">
+                <a href="#item3" class="title">
+                    <span>
+                        烤箱怎麼烤雞腿？
+                    </span><i class="icon"></i>
+                </a>
+                <p>
+                <ol class="textt">
+                    <li> 將烤盤鋪上烘焙紙再將雞腿排放置於烤盤上，記得雞腿排的中間要預留空隙</li>
+                    <li> 將海鹽及黑胡椒均勻撒在雞腿排上</li>
+                    <li> 將烤箱調整到上下火模式、溫度200度並進行預熱 </li>
+                    <li> 當烤箱預熱完畢後，將烤盤放入烤箱，盡量讓食材放在烤箱的正中間，以利均勻受熱</li>
+                    <li> 設定18分鐘，18分鐘後即完成!</li>
+                </ol>
+                </p>
+            </div>
+            <!-- 4 -->
+            <div class="item" id="item4">
+                <a href="#item4" class="title">
+                    <span>
+                        雞肉為什麼要泡鹽水？
+                    </span><i class="icon"></i>
+                </a>
+
+                <p>
+
+                <ul class="textt">
+                    <h3>鹽水與讓肉多汁的原理</h3>
+                    <li>這是由於鹽巴會從高濃度的鹽水區域，往低濃度的肉區域移動，重塑肉中的蛋白質分子使其變軟嫩、且空出更多的空間讓水份進入。</li>
+                    <li>同時間，水份也會從高濃度的鹽水區域，滲透細胞膜進入低濃度的肉裡，使其多汁。
+                    </li>
+                    <li>讓這件事發生的”鹽水濃度”與”時間”都很重要。</li>
+                    <li>如果鹽巴濃度太高，水(汁) 就會被從肉中吸出來。
+                    </li>
+                </ul>
+
+
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
