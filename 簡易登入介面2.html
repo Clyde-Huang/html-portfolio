@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登入介面</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Times New Roman', Times, serif;
+
+
+
+
+    }
+
+    body {
+        margin-top: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: auto;
+        background-color: aliceblue;
+
+
+    }
+
+    .loginbox {
+
+        position: relative;
+        width: 400px;
+        height: 400px;
+        background-color: rgba(152, 231, 231, 0.8);
+        box-shadow: 0 10 80px rgb(22, 5, 5, 0.3);
+        border: 1px solid rgb(31, 29, 29, 0.2);
+        border-radius: 50px;
+
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+
+
+
+    h1 {
+        text-align: center;
+        font-size: 3em;
+        margin-bottom: 30px;
+
+    }
+
+    .inbox {
+        position: relative;
+        width: 355px;
+        margin: 20px 0;
+        border-bottom: 2px solid rgb(253, 101, 55, 0.9);
+    }
+
+    .inbox>label {
+        position: absolute;
+        pointer-events: none;
+        transform: translateY(-50%);
+        top: 50px;
+        left: 5px;
+
+    }
+
+    .inbox>input {
+        width: 288px;
+        height: 55px;
+        background: transparent;
+        border: none;
+        outline: none;
+        font-size: 1.3em;
+
+
+    }
+
+    /* .inbox>input:hover
+    {border: 1px solid red;} */
+
+    .icon {
+        font-size: 1.2em;
+
+    }
+
+    .ab {
+        font-size: 0.9em;
+
+
+    }
+
+
+    #fg {
+        text-decoration: none;
+        color: #333;
+    }
+
+    #fg:hover {
+        text-decoration: underline;
+        color: rgb(218, 175, 35);
+    }
+
+    .ab>a {
+        position: relative;
+
+        right: -30%;
+    }
+
+    #login {
+        margin: 20px 10px;
+        font-size: 2em;
+        padding: 5px 20px;
+        background-color: rgb(240, 137, 171);
+        width: 100%;
+        height: auto;
+        height: 45px;
+        border: none;
+        outline: none;
+        border-radius: 2%;
+        cursor: pointer;
+        /* 鼠標變成點擊樣式 */
+        transition: all 0.3s ease;
+        /* 平滑過渡效果 */
+        position: relative;
+        right: 3%;
+        /* 硬改位置 */
+    }
+
+    #login:hover {
+        background-color: rgb(216, 35, 89);
+        /* 滑鼠懸停時背景色 */
+        transform: scale(1.05);
+        /* 鼠標懸停時按鈕稍微放大 */
+
+
+    }
+
+    /* .outbox {
+        position: absolute;
+        width: 529px;
+        height: 529px;
+        background: linear-gradient(180deg, #dc62ec 13%, #9900b8 100%);
+        border-radius: 89% 11% 90% 10% / 13% 89% 11% 87%;
+        https://9elements.github.io/fancy-border-radius/#13.89.89.10--. */
+
+
+    p>a {
+        text-decoration: none;
+        color: #f16202e6;
+
+    }
+
+    p>a:hover {
+        background-color: rgba(241, 230, 233, 0.911);
+        border: 2px solid;
+        border-radius: 2px;
+        padding: 6px 10px;
+
+    }
+</style>
+
+<body>
+    <!-- <div class="outbox"> </div> -->
+    <div class="loginbox">
+        <form action="0.0">
+            <h1>Login</h1>
+            <dvi class="inbox">
+                <span class="icon"><ion-icon name="mail-outline"></ion-icon></span> <input type="email"
+                    placeholder="Email" required>
+                <h3> <label></label></h3>
+                <span class="icon"><ion-icon name="bag-check-outline"></ion-icon></span> <input type="password"
+                    placeholder="Password" required>
+                <h3> <label></label></h3>
+            </dvi>
+            <div class="ab">
+                <input type="checkbox" class="remb"><label> Remember Email</label>
+                <a href="fg" id="fg">forgot password</a><br>
+                </dvi>
+                <button type="submit" id="login">login</button>
+                <p>Don't have an account?
+                    <a href="l">Register</a>
+                </p>
+            </div>
+
+
+
+
+
+        </form>
+    </div>
+    <!-- https://ionic.io/ionicons/usage -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
