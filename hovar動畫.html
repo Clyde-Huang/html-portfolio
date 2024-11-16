@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>動畫</title>
+</head>
+<style>
+    div {
+        width: 222px;
+        height: 222px;
+        background-color: red;
+        animation: anim 11S linear 2s infinite;
+        box-shadow: 80px 35px 50px black;
+    }
+
+    div:hover {
+        animation-play-state: paused;
+        /* background-color: coral; */
+    }
+
+    @keyframes anim {
+
+        0% {
+            width: 222px;
+            background-color: red;
+        }
+
+        27% {
+            width: 555px;
+            background-color: purple;
+        }
+
+        87% {
+            height: 555px;
+            background-color: rgb(173, 214, 120);
+        }
+
+        100% {
+            width: 222px;
+            background-color: red;
+        }
+
+
+    }
+</style>
+
+<body>
+    <div></div>
+</body>
+
+</html>

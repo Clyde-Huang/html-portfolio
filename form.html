@@ -1,0 +1,84 @@
+<html>
+
+<head>
+    <title>
+        表單
+    </title>
+</head>
+
+<body>
+
+    <form>
+        <label for="username">Username</label>
+        <input type="text" placeholder="帳" id="username">
+        <label for="password">Password</label>
+        <input type="password" placeholder="密" id="password">
+        <button>Register</button>
+    </form>
+
+
+    <h1>forms</h1>
+    <button>點此無效</button>
+    <form action="人員">
+        <p>
+            <label id="人" type="text" for="username">請輸入姓名</label>
+            <input type="text" name="username"><br>
+            <label id="password" type="password" for="password">請輸入密碼</label>
+            <input type="password"><br>
+        </p>
+        <input type="month"><br>
+        <input type="time"><br>
+
+        <label for="color">pick color
+            <input type="color"><br>
+        </label>
+        <button type="button">確認第1次</button><br>
+        <button>最後確認!</button>
+
+
+
+
+
+    </form>
+
+    <form action="https://www.google.com/search">
+        <p>
+        <h2>google收尋</h2>
+        <input type="text" name="q">
+        <button>GO</button>
+        </p>
+    </form>
+    <form action="主持">
+
+        <label for="誰">今天誰主持</label>
+        <select name="誰" id="誰">今天誰主持
+            <option value="ksr">ksr</option>
+            <option value="KS">KS</option>
+            <option value="JY">JY</option>
+            <option value="gg">gg</option>
+        </select>
+        <br>
+        <label for="分數" name="point">今天表現幾分</label>
+        <input type="range" min="0" mix="100" value="60" name="幾分">
+        <br>
+        <p>
+            <label for="意見">意見</label><br>
+            <textarea id="意見" rows="7" cols="87" name="意見?"></textarea>
+        </p>
+        <button>submit</button>
+    </form>
+
+    <h2>登入驗證碼展示</h2>
+    <form action="">
+        <label for="姓名">輸入姓名:</label>
+        <input type="text" required placeholder="姓">
+        <input type="text" required placeholder="名"><br>
+        <label for="email">email</label>
+        <input type="email" required placeholder="@">
+        <br><input type="submit" value="提交改登入">
+
+    </form>
+
+</body>
+
+</html>
