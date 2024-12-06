@@ -1,0 +1,5 @@
+1.改font:https://www.100font.com/thread-652.htm 
+<style> @font-face { font-family: 'MyCustomFont'; src: url('fonts/MyCustomFont.ttf') format('truetype'); 
+/* 根据字体格式调整 */ }
+body { font-family: 'MyCustomFont', sans-serif; }
+</style>
