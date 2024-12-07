@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>時鐘</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: rgba(230, 184, 154, 0.5);
+        /* 背景顏色可不要 */
+
+
+    }
+
+    .spot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        display: flex;
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        background-image: url();
+        z-index: 1;
+    }
+
+    .clock {
+        width: 350px;
+        height: 350px;
+        border-radius: 50%;
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(212, 182, 142, 0.9);
+        background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQr_dRfiADL6Tgr6bxFhRECSE6U9AbUUaBxGTKpmplPTBlq4buG7DKKOOSPq3N8iYHRAxs&usqp=CAU);
+        background-repeat: no-repeat;
+        background-size: cover;
+        /* background-size: 400px; */
+
+        box-shadow: 0 0 50px yellow;
+        border: px black solid;
+    }
+
+    .hour {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hr {
+        width: 160px;
+        height: 160px;
+
+        display: flex;
+        position: absolute;
+        justify-content: center;
+    }
+
+
+
+    .min {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mn {
+        width: 190px;
+        height: 190px;
+        display: flex;
+        position: absolute;
+        justify-content: center;
+    }
+
+    .sec {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sc {
+        width: 230px;
+        height: 230px;
+        display: flex;
+        position: absolute;
+        justify-content: center;
+    }
+
+    .hr:before,
+    .mn:before,
+    .sc:before {
+
+        box-shadow: 2px 0.6px 2px rgba(255, 255, 255, 0.1) inset,
+
+            2px 0.5px 2px rgba(0, 0, 0, 0.2) inset,
+
+            -3px 10px 10px rgba(0, 0, 0, 0.3);
+
+    }
+
+    .hr:before {
+
+        content: '';
+
+        width: 8px;
+
+        height: 80px;
+
+        background-color: #ff105e;
+
+        z-index: 10;
+
+        border-radius: 6px 6px 0 0;
+
+        background: blue;
+
+        border-radius: 0.5em;
+
+        width: 18px;
+
+        height: 60px;
+    }
+
+    .mn:before {
+        content: '';
+
+        width: 4px;
+
+        height: 90px;
+
+
+
+        z-index: 11;
+
+        border-radius: 6px 6px 0 0;
+
+
+
+        border-radius: 0.4em;
+        background: rgb(117, 117, 211);
+
+        width: 13px;
+
+        height: 70px;
+    }
+
+    .sc:before {
+        content: '';
+
+        z-index: 12;
+
+        border-radius: 0.3em;
+
+        background: rgb(206, 89, 69);
+
+
+        width: 10px;
+
+        height: 90px;
+    }
+
+    .twol {
+        position: absolute;
+        display: flex;
+        z-index: 15;
+        top: 2px;
+        font-size: 2.9em;
+    }
+
+    .three {
+        position: absolute;
+        display: flex;
+        z-index: 15;
+        right: 2px;
+        font-size: 2.9em;
+    }
+
+    .six {
+        position: absolute;
+        display: flex;
+        z-index: 15;
+        bottom: 2px;
+        font-size: 2.9em;
+    }
+
+    .nine {
+        position: absolute;
+        display: flex;
+        z-index: 15;
+        left: 2px;
+        font-size: 2.9em;
+    }
+</style>
+
+<body>
+
+    <div class="clock">
+        <div class="twol">12</div>
+        <div class="three">3</div>
+        <div class="six">6</div>
+        <div class="nine">9</div>
+
+        <div class="spot"></div>
+        <div class="hour">
+            <div class="hr" id="hr"></div>
+        </div>
+        <div class="min">
+            <div class="mn" id="mn"></div>
+        </div>
+        <div class="sec">
+            <div class="sc" id="sc"></div>
+        </div>
+    </div>
+</body>
+<script>
+    const deg = 6;
+
+    const hr = document.querySelector('#hr');
+
+    const mn = document.querySelector('#mn');
+
+    const sc = document.querySelector('#sc');
+
+    //Set the timer to execute once every second
+
+    setInterval(() => {
+
+        let day = new Date();
+
+        // Find the angle in one hour, one minute, and one second, a total of 360 degrees
+
+        let h = day.getHours() * 30; // One hour equals 30 degrees
+
+        let m = day.getMinutes() * deg; // One minute is equal to 6 degrees 
+
+        let s = day.getSeconds() * deg; // One second is equal to 6 degrees
+
+        hr.style.transform = `rotateZ(${h + m / 12}deg)`;
+
+        mn.style.transform = `rotateZ(${m}deg)`;
+
+        sc.style.transform = `rotateZ(${s}deg)`;
+
+    }, 1000)
+</script>
+
+</html>
