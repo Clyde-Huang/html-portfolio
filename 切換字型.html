@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>切字型</title>
+
+</head>
+<style>
+    body {
+
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    /* 字型2 */
+    body.font2 {
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    #toggle-btn {
+        padding: 10px 20px;
+        border: none;
+        background-color: #007BFF;
+        color: white;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 5px;
+    }
+
+    /* #toggle-btn :hover {
+        background-color: #5dd140;
+    } */
+    #toggle-btn :active {
+        color: red;
+    }
+</style>
+
+<body>
+    <button id="toggle-btn">切換字型</button>
+
+    <h1>需複製切換按鈕 按鈕可做css編輯</h1>
+    <h2>不一定要放boby 可放需要的divbox</h2>
+    中文字中文字
+    englisgssssss
+    123456789
+    !@#$%^&*()
+
+
+
+</body>
+<script>
+    // 取得切換按鈕
+    const toggleBtn = document.getElementById('toggle-btn');
+
+    // 設定按鈕點擊事件
+    toggleBtn.addEventListener('click', () => {
+        // 切換 body 的 字型 類別
+        document.body.classList.toggle('font2');
+    });
+
+</script>
+
+</html>

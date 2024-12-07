@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Mode Toggle</title>
+
+</head>
+<style>
+    /* 預設為白色背景 */
+    body {
+        background-color: #ffffff;
+        color: #000000;
+
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    /* 暗底模式 */
+    body.dark-mode {
+        background-color: #333333;
+        color: #ffffff;
+    }
+
+    #toggle-btn {
+        padding: 10px 20px;
+        border: none;
+        background-color: #007BFF;
+        color: white;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 5px;
+    }
+
+    #toggle-btn :hover {
+        background-color: #0056b3;
+    }
+</style>
+
+<body>
+    <button id="toggle-btn">切換模式)</button>
+
+    <h1>需複製切換按鈕 按鈕可做css編輯</h1>
+    <h2>不一定要放boby 可放需要的divbox</h2>
+    <p>這是一個簡單的切換暗底模式的範例。</p>
+
+
+</body>
+<script>
+    // 取得切換按鈕
+    const toggleBtn = document.getElementById('toggle-btn');
+
+    // 設定按鈕點擊事件
+    toggleBtn.addEventListener('click', () => {
+        // 切換 body 的 dark-mode 類別
+        document.body.classList.toggle('dark-mode');
+    });
+
+</script>
+
+</html>
