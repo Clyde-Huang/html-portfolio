@@ -8,3 +8,5 @@ body { font-family: 'MyCustomFont', sans-serif; }
 https://www.bilibili.com/video/BV1PQ4y1W7TB?vd_source=65bbd0ff88251ad5d20b5e818b96a021&spm_id_from=333.788.player.switch&p=7
 
 3.資料庫:https://www.youtube.com/watch?v=gvRXjsrpCHw
+
+12/9-11 :完成表單 側邊轉換按鈕現做 放上3個轉換 放上時鐘功能 
