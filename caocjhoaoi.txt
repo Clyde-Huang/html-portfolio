@@ -9,4 +9,8 @@ https://www.bilibili.com/video/BV1PQ4y1W7TB?vd_source=65bbd0ff88251ad5d20b5e818b
 
 3.資料庫:https://www.youtube.com/watch?v=gvRXjsrpCHw
 
-4.codesandbox (用用看)
+4.codesandbox 
+
+5.https://angular.dev/guide/forms/dynamic-forms 動表
+
+6.https://v6.angular.cn/guide/dynamic-form 動表
