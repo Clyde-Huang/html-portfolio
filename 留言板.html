@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>留言板</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            color: #fff;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: linear-gradient(90deg, #e0c3fc 0%, #8ec5fc 100%);
+            height: 100vh;
+        }
+
+        .messages {
+            margin-top: 100px;
+            width: 1200px;
+            padding: 50px 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.3));
+            border-radius: 40px;
+            box-shadow: 0 10px 50px #00000019;
+        }
+
+        .form {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            flex-direction: column;
+            width: 100%;
+            padding-bottom: 90px;
+        }
+
+        input:focus,
+        textarea:focus {
+            outline: none;
+        }
+
+        input,
+        textarea {
+            border: none;
+            color: #000;
+            margin-bottom: 40px;
+            font-size: 24px;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        #message {
+            height: 150px;
+        }
+
+        .messages h1 {
+            width: 100%;
+            text-align: left;
+            margin-bottom: 70px;
+            font-size: 48px;
+            background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 5px;
+        }
+
+        #submitBtn {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            background-image: linear-gradient(90deg, #e0c3fc 0%, #8ec5fc 100%);
+            border: none;
+            font-size: 18px;
+            letter-spacing: 5px;
+            width: 150px;
+            height: 50px;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+
+        #messageBoard {
+            width: 100%;
+            text-align: left;
+        }
+
+        .message {
+            width: 100%;
+            margin: 10px 0;
+            padding: 20px;
+            background: linear-gradient(90deg, #8ec5fc 0%, #e0c3fc 100%);
+            border-radius: 10px;
+            box-shadow: 0 10px 20px #00000026;
+        }
+
+        .message-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .content {
+            font-size: 16px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="messages">
+        <h1>留言板</h1>
+        <div class="form">
+            <textarea placeholder="留言內容" id="message"></textarea>
+            <button id="submitBtn">留言</button>
+        </div>
+        <div id="messageBoard"></div>
+    </div>
+
+    <script>
+        const submitBtn = document.getElementById('submitBtn');
+        const messageInput = document.getElementById('message');
+        const messageBoard = document.getElementById('messageBoard');
+
+        submitBtn.addEventListener('click', () => {
+            const message = messageInput.value.trim();
+
+            if (!message) {
+                alert('請輸入留言內容！');
+                return;
+            }
+
+            const newMessage = document.createElement('div');
+            newMessage.classList.add('message');
+
+            const currentTime = new Date().toLocaleString('zh-Hant', {
+                year: 'numeric', month: '2-digit', day: '2-digit',
+                hour: '2-digit', minute: '2-digit', second: '2-digit'
+            });
+
+            newMessage.innerHTML = `
+                <div class="message-info">
+                    <strong>匿名</strong>
+                    <span>發布於: ${currentTime}</span>
+                </div>
+                <div class="content">${message}</div>
+            `;
+
+            messageBoard.prepend(newMessage);
+            messageInput.value = '';
+        });
+    </script>
+</body>
+
+</html>
