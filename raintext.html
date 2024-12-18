@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>雨中文字</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: linear-gradient(to top, #979 0%, #fbc 100%);
+            overflow: hidden; /* 防止溢出 */
+        }
+
+        .shell {
+            position: relative;
+            height: 560px;
+        }
+
+        .cloud {
+            position: absolute;
+            top: 50px;
+            width: 320px;
+            height: 300px;
+            background-color: bisque;
+        }
+
+        .text {
+            position: absolute;
+            top: -50px;
+            color: #fff;
+            text-shadow: 0 0 5px #fff, 0 0 15px #fff, 0 0 30px #fff;
+            animation: rain 2s linear infinite; /* 調整雨滴掉落的動畫 */
+        }
+
+        @keyframes rain {
+            0% {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(500px) scale(1);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="shell">
+        <div class="cloud"></div>
+    </div>
+
+    <script>
+        // 隨機生成一個字符
+        function randomText() {
+            const text = ['牛肉','豬肉','排骨','雞腿','雞排','紅茶','綠茶','冬瓜茶','水餃','鍋燒麵','麻醬麵','陽春麵','貢丸湯','魚丸湯','燙青菜']; // 可自訂字符集
+            const letter = text[Math.floor(Math.random() * text.length)];
+            return letter;
+        }
+
+        // 創建雨滴效果
+        function rain() {
+            const cloud = document.querySelector('.cloud');
+            const e = document.createElement('div'); // 創建一個新的 div
+            const left = Math.floor(Math.random() * 310); // 隨機生成位置
+            const size = Math.random() * 1.5; // 隨機大小
+            const duration = Math.random() * 1 + 1; // 隨機動畫時間 1s 到 2s
+            const text = randomText(); // 隨機生成文字
+            e.classList.add('text');
+            e.innerText = text;
+            e.style.left = left + 'px'; // 設置文字的橫向位置
+            e.style.fontSize = 0.5 + size + 'em'; // 設置文字的大小
+            e.style.animationDuration = 1 + duration + 's'; // 設置動畫時長
+            cloud.appendChild(e); // 將元素加入到 cloud 中
+            setTimeout(() => {
+                cloud.removeChild(e); // 動畫結束後，移除該元素
+            }, (duration + 1) * 1000); // 等待動畫結束後再移除
+        }
+
+        // 每隔 20 毫秒生成一個新雨滴
+        setInterval(rain, 20);
+    </script>
+</body>
+
+</html>
