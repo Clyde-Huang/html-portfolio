@@ -20,3 +20,5 @@ body { font-family: 'MyCustomFont', sans-serif; }
 9.學簡單開關功能 學隱藏密碼 
 
 10.https://www.bilibili.com/video/BV183411q7uu/?vd_source=65bbd0ff88251ad5d20b5e818b96a021
+
+11.用 [(ngModel)] 吃資料  用click觸發收集資料
