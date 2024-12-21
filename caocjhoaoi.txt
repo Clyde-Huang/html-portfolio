@@ -25,4 +25,4 @@ body { font-family: 'MyCustomFont', sans-serif; }
 
 12.抓API 自動產出圖表?>做圖表呈現 x y 都是自動抓
 
-13.讓Home下面增加子路由 所以那些圖表 假表單都在這邊呈現
+13.讓Home下面增加子路由 所以那些圖表 假表單都在這邊呈現 (記得路由LINK要在div內)
