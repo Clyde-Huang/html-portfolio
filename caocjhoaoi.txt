@@ -24,3 +24,5 @@ body { font-family: 'MyCustomFont', sans-serif; }
 11.用 [(ngModel)] 吃資料  用click觸發收集資料 u要搞前後台按鈕 前鈕路到Home 進行中 未開始 已結束
 
 12.抓API 自動產出圖表?>做圖表呈現 x y 都是自動抓
+
+13.讓Home下面增加子路由 所以那些圖表 假表單都在這邊呈現
