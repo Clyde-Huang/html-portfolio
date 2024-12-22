@@ -4,7 +4,7 @@
 body { font-family: 'MyCustomFont', sans-serif; }
 </style>
 
-2.資料結構 或看懂天氣API
+2.資料結構https://www.dcard.tw/f/softwareengineer/p/240958202 或看懂天氣API
 
 3.資料庫:https://www.youtube.com/watch?v=gvRXjsrpCHw
 
