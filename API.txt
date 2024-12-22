@@ -1,0 +1,93 @@
+金鑰
+天氣授權:
+CWA-AA4679D5-2248-4FEB-B537-F80379B08E42
+
+
+1.在app.config內 
+import {pronideHttpClient} from '@angular/common/http'
+下方roviders:[]內加上,pronideHttpClient,
+
+2.(可不設)
+新增資料夾@http.service
+再新增檔案http.service.ts 
+(這是ts檔案，名稱可自定，但要是ts檔)
+設定好處是這是共用的每個組件都可用
+建好的ts檔預設:
+import { Injectable } from '@angular/core';
+
+@Injectable({
+
+providedIn: 'root'
+})
+export class HttpService {
+
+constructor() { }
+
+}
+
+再來把private httpClient: HttpClient 放進constructor() { } //(可自訂名稱)
+並import { HttpClient } from '@angular/common/http';
+
+接著再寫
+   // read
+
+    getApi(url: string) {
+
+        return this.httpClient.get(url);
+
+    }
+
+    //Add
+
+    postApi(url: string, postData: any) {
+
+        return this.httpClient.post(url, postData);
+
+    }
+
+    // renew
+
+    putApi(url: string, postData: any) {
+
+        return this.httpClient.put(url, postData);
+
+    }
+
+    // delete
+
+    delApi(url: string) {
+
+        return this.httpClient.delete(url);
+
+    }
+
+3.回到要串接API的組件 的ts檔(之後稱a的ts檔)
+在export中 寫入  constructor(private httpService: HttpService) {}
+滑鼠放到HttpService點燈泡讓他自動幫你import (quick fix)
+此建構式後加上
+ ngOnInit(): void {
+    this.httpService.getApi('API網址JSON檔')  //(輸入this.後就可以直選，無選項代表沒設好)
+   .subscribe((res)=>{
+    console.log(res);//res可自訂名稱 console這行是確認有沒有綁API成功
+  }) 
+ }
+
+---------------完整export內容
+export class 名子Component {
+
+  constructor(private httpService: HttpService) {}
+  //呼叫http.service.ts 建好的
+  ngOnInit(): void {
+    this.httpService
+      .getApi(
+        'API網址JSON檔'
+      )
+      .subscribe((res) => {
+        console.log(res); //確認用
+      });
+  }
+}
+//報錯可能是少或多; 或是打錯字
+
+
+
