@@ -8,7 +8,7 @@ body { font-family: 'MyCustomFont', sans-serif; }
 
 3.資料庫:https://www.youtube.com/watch?v=gvRXjsrpCHw
 
-
+4.https://github.com/lionashu/Angular17-Ecommerce-Application-using-JSON-Server
 
 9.學簡單開關功能 學隱藏密碼 
 
