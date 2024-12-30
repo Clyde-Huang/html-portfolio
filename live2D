@@ -1,0 +1,27 @@
+// In your component's TypeScript file (e.g., app.component.ts)
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  template: `
+    <div id="live2d-container"></div>
+  `
+})
+export class AppComponent implements OnInit {
+  ngOnInit() {
+    this.loadLive2DScript();
+  }
+
+  private loadLive2DScript() {
+    const script = document.createElement('script');
+    script.src = 'https://fastly.jsdelivr.net/npm/live2d-widgets@0/autoload.js';
+    script.async = true;
+    document.body.appendChild(script);
+  }
+}
+
+
+
+
+-----------------------
+<script src="https://fastly.jsdelivr.net/npm/live2d-widgets@0/autoload.js"></script> 我要把這段放進angular ts
