@@ -1,21 +1,12 @@
-1.改font:https://www.100font.com/thread-652.htm 
-<style> @font-face { font-family: 'MyCustomFont'; src: url('fonts/MyCustomFont.ttf') format('truetype'); 
-/* 根据字体格式调整 */ }
-body { font-family: 'MyCustomFont', sans-serif; }
-</style>
 
-2.資料結構https://www.dcard.tw/f/softwareengineer/p/240958202 或看懂天氣API
+
+2.資料結構https://www.dcard.tw/f/softwareengineer/p/240958202 
 
 3.資料庫:https://www.youtube.com/watch?v=gvRXjsrpCHw
 
-4.https://github.com/lionashu/Angular17-Ecommerce-Application-using-JSON-Server
 
-9.學簡單開關功能 學隱藏密碼 
 
-10.https://www.bilibili.com/video/BV183411q7uu/?vd_source=65bbd0ff88251ad5d20b5e818b96a021
 
-11.用 [(ngModel)] 吃資料  用click觸發收集資料 u要搞前後台按鈕 前鈕路到Home 進行中 未開始 已結束
 
-12.抓API 自動產出圖表?>做圖表呈現 x y 都是自動抓
 
-13.讓Home下面增加子路由 所以那些圖表 假表單都在這邊呈現 (記得路由LINK要在div內)
+
