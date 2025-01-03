@@ -1,4 +1,4 @@
-
+1.docker k8s
 
 2.資料結構https://www.dcard.tw/f/softwareengineer/p/240958202 
 
